@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.startQuiz, {super.key});
+  const StartScreen( {super.key, required this.startQuiz});
   final void Function() startQuiz;
 
   @override
@@ -23,7 +23,7 @@ class StartScreen extends StatelessWidget {
             "Learning Africa Languages in the fun way! ",
             style: GoogleFonts.lato(
                 color: Colors.white,
-                fontSize: 22,
+                fontSize: 20,
                 fontWeight: FontWeight.bold
             ),
              textAlign: TextAlign.center,
