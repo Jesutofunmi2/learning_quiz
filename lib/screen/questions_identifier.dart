@@ -18,6 +18,7 @@ class QuestionsIdentifier extends StatelessWidget {
         color: isCorrect
             ? const Color.fromARGB(255, 150, 198, 241)
             : const Color.fromARGB(255, 249, 133, 241),
+        borderRadius: BorderRadius.circular(50)
       ),
       child: Text(
         questionNumber.toString(),

@@ -17,40 +17,43 @@ class SummaryItem extends StatelessWidget {
         QuestionsIdentifier(isCorrect: correct, questionIndex: itemData['question_index'] as int),
         const SizedBox(width: 20,),
         Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                itemData['question'] as String,
-                style: GoogleFonts.lato(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-                textAlign: TextAlign.start,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                itemData['correct_answer'] as String,
-                style: GoogleFonts.lato(
-                    color: const Color.fromARGB(255, 150, 198, 241),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12),
-                textAlign: TextAlign.start,
-              ),
-              const SizedBox(
-                height: 2,
-              ),
-              Text(
-                itemData['user_answer'] as String,
-                style: GoogleFonts.lato(
-                    color: const Color.fromARGB(255, 249, 133, 241),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12),
-                textAlign: TextAlign.start,
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 4.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  itemData['question'] as String,
+                  style: GoogleFonts.lato(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                  textAlign: TextAlign.start,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  itemData['correct_answer'] as String,
+                  style: GoogleFonts.lato(
+                      color: const Color.fromARGB(255, 150, 198, 241),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12),
+                  textAlign: TextAlign.start,
+                ),
+                const SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  itemData['user_answer'] as String,
+                  style: GoogleFonts.lato(
+                      color: const Color.fromARGB(255, 249, 133, 241),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12),
+                  textAlign: TextAlign.start,
+                ),
+              ],
+            ),
           ),
         ),
       ],
